@@ -30,7 +30,7 @@ const PriorityInbox = () => {
         setLoading(true);
         try {
             await Log('frontend', 'info', 'page', `Loading priority inbox with top ${topN}`);
-            const data = await fetchNotifications(100, 1, filterType);
+            const data = await fetchNotifications(10, 1, filterType);
             
             const sorted = data.sort((a, b) => {
                 const pA = getPriority(a);
