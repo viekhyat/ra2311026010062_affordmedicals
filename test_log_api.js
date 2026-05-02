@@ -1,0 +1,12 @@
+const axios = require('axios');
+
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJ2azg0MTdAc3JtaXN0LmVkdS5pbiIsImV4cCI6MTc3NzY5ODU5NSwiaWF0IjoxNzc3Njk3Njk1LCJpc3MiOiJBZmZvcmQgTWVkaWNhbCBUZWNobm9sb2dpZXMgUHJpdmF0ZSBMaW1pdGVkIiwianRpIjoiZmM5NmI5YWYtOTU2Zi00NzM1LTkyODItNDQyYzBiYmFkOTk4IiwibG9jYWxlIjoiZW4tSU4iLCJuYW1lIjoidmlla2h5YXQga2hhcmUiLCJzdWIiOiJkOWIxZDBiYi05ZmIwLTRlNWItOGU2MC1mNTI4ODZjNTlmY2YifSwiZW1haWwiOiJ2azg0MTdAc3JtaXN0LmVkdS5pbiIsIm5hbWUiOiJ2aWVraHlhdCBraGFyZSIsInJvbGxObyI6InJhMjMxMTAyNjAxMDA2MiIsImFjY2Vzc0NvZGUiOiJRa2JweEgiLCJjbGllbnRJRCI6ImQ5YjFkMGJiLTlmYjAtNGU1Yi04ZTYwLWY1Mjg4NmM1OWZjZiIsImNsaWVudFNlY3JldCI6IlFxV1BuaHR1WFBOTVdmd0cifQ.wUers0s071fL0tb31YQg9-m0Op7RwDQZbsxs5AnYIKw";
+
+axios.post('http://20.207.122.201/evaluation-service/logs', {
+    stack: 'frontend',
+    level: 'info',
+    package: 'page',
+    message: 'Marked notification 4c7c5818-fdea-4514-a7d2-000e16f99d3c as read'
+}, {
+    headers: { 'Authorization': `Bearer ${token}` }
+}).then(res => console.log(res.data)).catch(err => console.error(err.response ? err.response.data : err.message));
