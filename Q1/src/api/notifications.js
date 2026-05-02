@@ -3,7 +3,7 @@ import { Log } from '../middleware/logger';
 
 export const fetchNotifications = async (limit, page, notificationType) => {
     try {
-        const token = localStorage.getItem('access_token');
+        const token = import.meta.env.VITE_ACCESS_TOKEN || localStorage.getItem('access_token');
         let url = `/evaluation-service/notifications?page=${page}&limit=${limit}`;
         if (notificationType) {
             url += `&notification_type=${notificationType}`;
