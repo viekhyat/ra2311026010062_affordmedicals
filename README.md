@@ -4,7 +4,7 @@
 **Name:** Viekhyat Khare  
 
 ### 🎥 Demonstration Video
-**Watch the App in Action:** [Click here to watch the demo video](./demo_video.mp4)
+**Watch the App in Action:** [Click here to watch the demo video on Google Drive](https://drive.google.com/file/d/1Te087lhciVWzA4vmcZhAN0dLH7JXvslr/view?usp=sharing)
 
 This repository contains the complete implementation for the Frontend Coding Assessment, divided into the React Application (Q1) and the custom Data Structure Algorithm (Q2).
 
